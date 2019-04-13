@@ -1,28 +1,24 @@
 ## Case Study
 
 The problem is churn prediction with a ride-sharing company in San Francisco.
-Since the data is sourced from a real company, I am not able to share the dataset. See more about the problem in
-[group.md](group.md). 
+
+Since the data is sourced from a real company, I am not able to share the dataset. 
 
 
 ## Case Study - Churn Prediction
 
 A ride-sharing company (Company X) is interested in predicting rider retention.
-To help explore this question, we have provided a sample dataset of a cohort of
+To help explore this question, there is a sample dataset of a cohort of
 users who signed up for an account in January 2014. The data was pulled on July
 1, 2014; we consider a user retained if they were “active” (i.e. took a trip)
 in the preceding 30 days (from the day the data was pulled). In other words, a
-user is "active" if they have taken a trip since June 1, 2014. The data,
-`churn.csv`, is in the [data](data) folder.  The data are split into train and
-test sets.  You are encouraged to tune and estimate your model's performance on
-the train set, then see how it does on the unseen data in the test set at the
-end.
+user is "active" if they have taken a trip since June 1, 2014. 
 
-We would like you to use this data set to help understand **what factors are
+The data is used to help understand **what factors are
 the best predictors for retention**, and offer suggestions to help Company X. 
-Therefore, your task is not only to build a
-model that minimizes error, but also a model that allows you to interpret the
-factors that contributed to your predictions.
+We built a
+model that minimizes error, but also a model that allows interpretability of the
+factors that contributed to the predictions.
 
 Here is a detailed description of the data:
 
@@ -51,30 +47,41 @@ be retained.
 model*.
  
 4. Identify / interpret features that are the most influential in affecting
-your predictions.
+the predictions.
 
 5. Discuss the validity of your model. Issues such as
 leakage.  For more on leakage, see [this essay on
 Kaggle](https://www.kaggle.com/wiki/Leakage), and this paper: [Leakage in Data
 Mining: Formulation, Detection, and Avoidance](https://www.cs.umb.edu/~ding/history/470_670_fall_2011/papers/cs670_Tran_PreferredPaper_LeakingInDataMining.pdf).
 
-6. Repeat 2 - 5 until you have a satisfactory model.
+6. Repeat 2 - 5 until we have a satisfactory model.
 
 7. Consider business decisions that your model may indicate are appropriate.
 Evaluate possible decisions with metrics that are appropriate for *decision
 rules*.
    
-## Deliverables
+## Details of case study
+  - How did we compute the target?
+    * To gather the target, we found all users who had not used our services in the past 30 days as a churned customer.
+  - What model did we use in the end?
+    * We tested a number of different models including Random Forest, Gradient Boosting, and Adaboost. Ultimately, we chose an adaboost classifier and were able to predict churn outcomes accurately 78% of the time. 
+    * The strongest features in our model include:
+        - Users not giving a driver rating
+        - Android users
+        - Signup Date
+        - Users in Astapor
+        - Average rating given to drivers
 
-- Code you used to build the model.  The more repeatable, self explanatory, the
-  better.
-
-- A presentation including the following points:
-  - How did you compute the target?
-  - What model did you use in the end? Why?
-  - Alternative models you considered? Why are they not good enough?
-  - What performance metric did you use to evaluate the *model*? Why?
   - **Based on insights from the model, what plans do you propose to
     reduce churn?**
+    * Suggest that promotional offers be given to those who are predicted to churn
+
   - What are the potential impacts of implementing these plans or decisions?
-    What performance metrics did you use to evaluate these *decisions*, why?
+    * According to cost benefit and profit curve analysis, implementing promotions to churning customers would yield $68000
+
+  - Future Steps:
+    * Feature refinement
+    * Larger grid search
+    * Further model optimization
+    * Attempting more modeling techniques
+    * Get better data to work with
