@@ -41,10 +41,7 @@ Here is a detailed description of the data:
 provided data for this analysis.
    
 <p align="center"> 
-<img src="images/churn_rating.png">
-</p>
-<p align="center"> 
-<img src="images/churn_trips.png">
+<img src="images/rating_driver"
 </p>
 2. Build a predictive model to help determine the probability that a rider will
 be retained.
