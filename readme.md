@@ -40,6 +40,12 @@ Here is a detailed description of the data:
 1. Perform any cleaning, exploratory analysis, and/or visualizations to use the
 provided data for this analysis.
    
+<p align="center"> 
+<img src="images/churn_rating.png">
+</p>
+<p align="center"> 
+<img src="images/churn_trips.png">
+</p>
 2. Build a predictive model to help determine the probability that a rider will
 be retained.
 
@@ -62,7 +68,7 @@ rules*.
    
 ## Details of case study
   - How did we compute the target?
-    * To gather the target, we found all users who had not used our services in the past 30 days as a churned customer.
+    * To gather the target, we found all users who had not used our services in the past 30 days as a churned customer. 
   - What model did we use in the end?
     * We tested a number of different models including Random Forest, Gradient Boosting, and Adaboost. Ultimately, we chose an adaboost classifier and were able to predict churn outcomes accurately 78% of the time. 
     * The strongest features in our model include:
@@ -72,12 +78,22 @@ rules*.
         - Users in Astapor
         - Average rating given to drivers
 
+<p align="center"> 
+<img src="images/feat_imp.png">
+</p>
+
   - **Based on insights from the model, what plans do you propose to
     reduce churn?**
     * Suggest that promotional offers be given to those who are predicted to churn
 
   - What are the potential impacts of implementing these plans or decisions?
     * According to cost benefit and profit curve analysis, implementing promotions to churning customers would yield $68000
+
+<p align="center"> 
+<img src="images/cm.png">
+<img src="images/cb_matrix.png">
+<img src="images/profit.png">
+</p>
 
   - Future Steps:
     * Feature refinement
