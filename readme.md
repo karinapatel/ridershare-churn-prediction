@@ -70,11 +70,11 @@ rules*.
   - What model did we use in the end?
     * We tested a number of different models including Random Forest, Gradient Boosting, and Adaboost. Ultimately, we chose an adaboost classifier and were able to predict churn outcomes accurately 78% of the time. 
     * The strongest features in our model include:
-        - Users not giving a driver rating
-        - Android users
-        - Signup Date
-        - Users in Astapor
-        - Average rating given to drivers
+        - Distance of ride
+        - % of weekday riders taken
+        - # trips in first 30 days
+        - Date of signup
+        - Surge percentage
 
 <p align="center"> 
 <img src="images/feat_imp.png">
